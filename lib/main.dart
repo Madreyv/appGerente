@@ -1,5 +1,8 @@
 import 'package:app_gerente/Components/main_drawer.dart';
 import 'package:app_gerente/Models/gestor.dart';
+import 'package:app_gerente/Telas/tela_crud_funcionarios.dart';
+import 'package:app_gerente/Telas/tela_crud_cliente.dart';
+import 'package:app_gerente/Utilitarios/app_routes.dart';
 import 'package:flutter/material.dart';
 
 import 'Components/lista_servicos.dart';
@@ -15,15 +18,18 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: Colors.cyan.shade900,
         primarySwatch: Colors.cyan,
-        accentColor: Colors.cyan.shade500,
+        accentColor: Colors.cyan[700],
       ),
       home: GerenteApp(),
+      routes: {
+        AppRoutes.CRUDCLIENTES: (ctx) => TelaCrudCliente(),
+        AppRoutes.CRUDFUNCIONARIOS: (ctx) => TelaCrudFuncionarios(),
+      },
     );
   }
 }
 
 class GerenteApp extends StatelessWidget {
- 
   final Gestor gestor = Gestor(
     nome: 'Madreyv Gomes',
     email: 'madreyv@fgbinformatica.com.br',

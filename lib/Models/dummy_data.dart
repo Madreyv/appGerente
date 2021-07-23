@@ -1,3 +1,4 @@
+import 'package:app_gerente/Models/cliente.dart';
 import 'package:app_gerente/Models/servicos.dart';
 
 final DUMMY_SERVICOS = [
@@ -68,5 +69,26 @@ final DUMMY_SERVICOS = [
     status: "Aguardando peça",
     inicio: null,
     fim: null,
+  ),
+];
+
+final DUMMT_CLIENTES = [
+  Cliente(
+    cnpj: '35.788.272/0001-82',
+    nome: 'Curvelo Transportes',
+    apelido: 'Curvelo',
+    imagemURL: 'http://www.curvelotransportes.com.br/images/segundo-logo.png',
+  ),
+  Cliente(
+    cnpj: '08.628.218/0001-05',
+    nome: 'FAJE Logística',
+    apelido: 'Faje',
+    imagemURL: 'http://www.fajelog.com.br/images/logo.png',
+  ),
+  Cliente(
+    cnpj: '30.411.573/0001-79',
+    nome: 'TNF TRANSPORTES E GUINDASTES',
+    apelido: 'TNF',
+    imagemURL: 'http://www.tnf.com.br/img/logos/logo.png',
   ),
 ];

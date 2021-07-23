@@ -88,8 +88,16 @@ class MainDrawer extends StatelessWidget {
           SizedBox(
             height: 20,
           ),
-          _createItem(Icons.account_circle_rounded, "FUNCIONARIOS", null),
-          _createItem(Icons.storage_sharp, "CLIENTES", null)
+          _createItem(
+            Icons.account_circle_rounded,
+            "FUNCIONARIOS",
+            () => Navigator.of(context).pushNamed("/funcionarios"),
+          ),
+          _createItem(
+            Icons.storage_sharp,
+            "CLIENTES",
+            () => Navigator.of(context).pushNamed("/clientes"),
+          )
         ],
       ),
     );
